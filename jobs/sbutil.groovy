@@ -18,7 +18,6 @@ job {
                 goals ('-Psbforge-nexus')
                 goals('clean')
                 goals('install')
-                providedSettings('/home/abr/.m2/settings.xml')
         }
     }
 }
