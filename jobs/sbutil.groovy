@@ -5,17 +5,21 @@ job {
     scm {
         git {
                 remote{
-        url('https://github.com/statsbiblioteket/sbutil')
+                        url('https://github.com/statsbiblioteket/sbutil')
                 }
         }
     }
     triggers {
         githubPush()
-        scm('*/15 * * * *')
     }
     jdk 'java7'
     steps {
-        maven('-e clean test')
+        maven{
+                goals ('-Psbforge-nexus')
+                goals('clean')
+                goals('deploy')
+                providedSettings('/home/abr/.m2/settings.xml')
+        }
     }
 }
 

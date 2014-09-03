@@ -3,7 +3,11 @@ job {
     description 'This is the sbutil helpful java library'
     concurrentBuild true
     scm {
-        github('https://github.com/statsbiblioteket/sbutil')
+        git {
+                remote{
+        url('https://github.com/statsbiblioteket/sbutil')
+                }
+        }
     }
     triggers {
         githubPush()
