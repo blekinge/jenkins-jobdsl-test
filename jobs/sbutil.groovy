@@ -17,7 +17,7 @@ job {
         maven{
                 goals ('-Psbforge-nexus')
                 goals('clean')
-                goals('deploy')
+                goals('install')
                 providedSettings('/home/abr/.m2/settings.xml')
         }
     }
