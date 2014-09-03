@@ -17,9 +17,8 @@ job {
         maven{
                 goals ('-Psbforge-nexus')
                 goals('clean')
-                goals('install')
+                goals('package')
         }
     }
 }
-
 
