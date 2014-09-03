@@ -6,6 +6,7 @@ job {
         git('git@github.com:statsbiblioteket/sbutil.git')
     }
     triggers {
+        githubPush()
         scm('*/15 * * * *')
     }
     jdk 'java7'

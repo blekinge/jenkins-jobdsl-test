@@ -1,7 +1,7 @@
 job {
     name 'SButil'
     description 'This is the sbutil helpful java library'
-    concurrentBuild 'true'
+    concurrentBuild true
     scm {
         git('git@github.com:statsbiblioteket/sbutil.git')
     }
